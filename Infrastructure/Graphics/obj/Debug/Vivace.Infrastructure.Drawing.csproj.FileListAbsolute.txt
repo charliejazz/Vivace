@@ -1,0 +1,5 @@
+C:\Development\Vivace\Infrastructure\Graphics\bin\Debug\Vivace.Infrastructure.Drawing.dll
+C:\Development\Vivace\Infrastructure\Graphics\bin\Debug\Vivace.Infrastructure.Drawing.pdb
+C:\Development\Vivace\Infrastructure\Graphics\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Vivace\Infrastructure\Graphics\obj\Debug\Vivace.Infrastructure.Drawing.dll
+C:\Development\Vivace\Infrastructure\Graphics\obj\Debug\Vivace.Infrastructure.Drawing.pdb

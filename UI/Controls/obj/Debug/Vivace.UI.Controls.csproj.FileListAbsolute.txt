@@ -1,0 +1,9 @@
+C:\Development\Vivace\UI\Controls\bin\Debug\Vivace.UI.Controls.dll
+C:\Development\Vivace\UI\Controls\bin\Debug\Vivace.UI.Controls.pdb
+C:\Development\Vivace\UI\Controls\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Vivace\UI\Controls\obj\Debug\Vivace.UI.Controls.dll
+C:\Development\Vivace\UI\Controls\obj\Debug\Vivace.UI.Controls.pdb
+C:\Development\Vivace\UI\Controls\bin\Debug\Vivace.Infrastructure.Configuration.dll
+C:\Development\Vivace\UI\Controls\bin\Debug\Vivace.Infrastructure.Configuration.pdb
+C:\Development\Vivace\UI\Controls\bin\Debug\Vivace.Infrastructure.Common.dll
+C:\Development\Vivace\UI\Controls\bin\Debug\Vivace.Infrastructure.Common.pdb

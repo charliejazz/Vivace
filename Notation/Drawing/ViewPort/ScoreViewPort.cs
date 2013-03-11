@@ -1,0 +1,343 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using Vivace.Infrastructure.Common;
+using Vivace.Infrastructure.Configuration;
+using Vivace.Notation.Engraving;
+
+namespace Vivace.Notation.Drawing.ViewPort {
+    /// <summary>
+    /// Score viewport
+    /// </summary>
+    public class ScoreViewPort : Control {
+        #region Declarations
+        private float worldX, worldY;
+        private float zoomFactor = 1.0F;
+        private bool dragging = false;
+        private Matrix viewPortMatrix;
+        private List<PageElement> layers;
+        private Image backgroundImage;
+        private TextureBrush pageTexture;
+        private Brush backgroundBrush;
+        private Brush pageBrush;
+        private ViewPortElement lastClickedElement;
+        private Matrix transform;
+        private Matrix clonedTransform;
+        private float prevWorldX, prevWorldY;
+        private GraphicsContext graphicsContext;
+        private object _drawlock = new object();
+        private int drawCount = 0;
+        #endregion
+
+        #region Constructors
+        /// <summary>
+        /// default constructor
+        /// </summary>
+        public ScoreViewPort() {
+            /* let the control handle the double buffering */
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
+            /* we want to handle background rendering ourselves */
+            this.SetStyle(ControlStyles.Opaque, true);
+            this.UpdateStyles(); /* refresh the styles */
+            /* setup mouse handlers */
+            this.MouseUp += new MouseEventHandler(ScoreViewPort_MouseUp);
+            this.MouseDown += new MouseEventHandler(ScoreViewPort_MouseDown);
+            this.MouseMove += new MouseEventHandler(ScoreViewPort_MouseMove);
+            /* load textures */
+            loadTextures();
+        }
+        #endregion
+
+        #region Public Members
+        /// <summary>
+        /// converts window co-ords to virtual co-ords within the score
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="out_x"></param>
+        /// <param name="out_y"></param>
+        public void WindowToVirtual(int x, int y, out float out_x, out float out_y) {
+            //Matrix m = new Matrix(
+            //    EngravingRules.VirtualToPixel, 0, 0, EngravingRules.VirtualToPixel, 0, 0
+            //);
+            Matrix m = transform.Clone();
+
+            m.Translate(worldX, worldY);
+            m.Scale(zoomFactor, zoomFactor, MatrixOrder.Append);
+            m.Invert();
+            PointF[] p = { new PointF(x, y) };
+            m.TransformPoints(p);
+
+            out_x = p[0].X;
+            out_y = p[0].Y;
+        }
+        /// <summary>
+        /// converts virtual co-ords to window co-ords within the score
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="out_x"></param>
+        /// <param name="out_y"></param>
+        public void VirtualToWindow(float x, float y, out int out_x, out int out_y) {
+            //Matrix m = new Matrix(
+            //    EngravingRules.VirtualToPixel, 0, 0, EngravingRules.VirtualToPixel, 0, 0
+            //);
+            Matrix m = transform.Clone();
+
+            m.Translate(worldX, worldY);
+            m.Scale(zoomFactor, zoomFactor, MatrixOrder.Append);
+            Point[] p = { new Point((int)x, (int)y) };
+            m.TransformPoints(p);
+
+            out_x = p[0].X;
+            out_y = p[0].Y;
+        }
+        /// <summary>
+        /// converts window co-ords to virtual co-ords within the score
+        /// </summary>
+        /// <param name="points">array of points to convert</param>
+        public void TransformPointsWindowToVirtual(PointF[] points) {
+            //Matrix m = new Matrix(
+            //    EngravingRules.VirtualToPixel, 0, 0, EngravingRules.VirtualToPixel, 0, 0
+            //);
+
+            Matrix m = transform.Clone();
+
+            m.Translate(worldX, worldY);
+            m.Scale(zoomFactor, zoomFactor, MatrixOrder.Append);
+            m.Invert();
+            m.TransformPoints(points);
+        }
+        /// <summary>
+        /// converts virtual co-ords to window co-ords within the score
+        /// </summary>
+        /// <param name="points">array of points to convert</param>
+        public void TransformPointsVirtualToWindow(Point[] points) {
+            Matrix m = transform.Clone();
+
+            m.Translate(worldX, worldY);
+            m.Scale(zoomFactor, zoomFactor, MatrixOrder.Append);
+            m.TransformPoints(points);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="layer"></param>
+        public void AddLayer(PageElement layer) {
+            if (layers.Count == 0) {
+                layer.Position = new PointF(0, 0);
+                layers.Add(layer);
+            } else {
+                PageElement lastLayer = layers[layers.Count - 1];
+                layer.Position = new PointF(lastLayer.Position.X + 250, 0);
+                layers.Add(layer);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="element"></param>
+        public void FocusElement(ViewPortElement element) {
+
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void BeginDraw() {
+            lock (_drawlock)
+                drawCount++;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void EndDraw() {
+            lock (_drawlock)
+                drawCount--;
+
+            if (drawCount == 0)
+                this.Invalidate();
+        }
+
+        #endregion
+
+        #region Mouse handlers
+        private void ScoreViewPort_MouseMove(object sender, MouseEventArgs e) {
+            float x, y;
+
+            WindowToVirtual(e.X, e.Y, out x, out y);
+
+            if (e.Button == MouseButtons.Left) {
+                worldX += x - prevWorldX;
+                worldY += y - prevWorldY;
+                Invalidate();
+            }
+            // why does this need to be called twice?
+            WindowToVirtual(e.X, e.Y, out prevWorldX, out prevWorldY);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ScoreViewPort_MouseDown(object sender, MouseEventArgs e) {
+            float x, y;
+            WindowToVirtual(e.X, e.Y, out x, out y);
+            // get clicked layer
+            PageElement layer = getLayerAtPoint(x, y);
+
+            //if (layer != null) {
+            //    lastClickedElement = layer.PageMap.GetElementAt(
+            //        x - layer.Position.X, y - layer.Position.Y
+            //    );
+            //}
+        }
+
+        private void ScoreViewPort_MouseUp(object sender, MouseEventArgs e) {
+
+        }
+        #endregion
+
+        #region Overrides
+        protected override void OnPaint(PaintEventArgs e) {
+            PageElement layer;
+
+            viewPortMatrix = new Matrix(
+                EngravingRules.VirtualToPixel, 0, 0, EngravingRules.VirtualToPixel, 0, 0
+            );
+
+            //viewPortMatrix = tranform.Clone();
+
+            viewPortMatrix.Translate(worldX, worldY);
+            viewPortMatrix.Scale(zoomFactor, zoomFactor, MatrixOrder.Append);
+
+            int firstLayer = 0, layerCount = 0;
+
+            bool bgvisible;
+            bgvisible = getVisibleLayers(ref firstLayer, ref layerCount);
+
+            if (bgvisible)
+                this.InvokePaintBackground(this, e);
+
+            for (int l = 0; l < layerCount; l++) {
+                layer = layers[firstLayer + l];
+                RectangleF rect = layer.Rectangle;
+
+                e.Graphics.FillRectangle(Brushes.White, rect);
+                // translate to layer origin
+                e.Graphics.TranslateTransform(rect.X, rect.Y);
+                // call layer render function
+                layer.Render(e.Graphics);
+            }
+            // reset transform
+            e.Graphics.ResetTransform();
+#if DEBUG
+            e.Graphics.DrawString(
+                String.Format("WorldX: {0} WorldY: {1} First Layer: {2} LayerCount = {3} BGVisible = {4}",
+                    worldX.ToString(), worldY.ToString(), firstLayer.ToString(), layerCount.ToString(), bgvisible.ToString()),
+                    this.Font, Brushes.Red, 0, 0
+            );
+#endif
+        }
+
+        /// <summary>
+        /// Render viewport background image
+        /// </summary>
+        /// <param name="pevent"></param>
+        protected override void OnPaintBackground(PaintEventArgs pevent) {
+            if (backgroundImage != null)
+                pevent.Graphics.DrawImage(backgroundImage, this.ClientRectangle);
+            else
+                pevent.Graphics.FillRectangle(backgroundBrush, this.ClientRectangle);
+        }
+        #endregion
+
+        #region private Methods
+        /// <summary>
+        /// load the texture files
+        /// </summary>
+        private void loadTextures() {
+            if (!String.IsNullOrEmpty
+                (ApplicationSettings.CurrentSetting.BackgroundTextureFile)
+            ) {
+                backgroundImage = (Image)Bitmap.FromFile(
+                    ApplicationSettings.CurrentSetting.BackgroundTextureFile
+                );
+            } else {
+                backgroundImage = null;
+                backgroundBrush = Brushes.Black;
+            }
+        }
+        /// <summary>
+        /// Get the layers visible within the viewport
+        /// </summary>
+        /// <param name="firstLayer">first layer that is visible</param>
+        /// <param name="layerCount">number of visible layers</param>
+        /// <returns>if the layers totally obscure the background</returns>
+        private bool getVisibleLayers(ref int firstLayer, ref int layerCount) {
+            bool bgVisible = true;
+
+            firstLayer = -1;
+            layerCount = 0;
+            PointF[] points = {
+                new PointF(this.DisplayRectangle.Left, this.DisplayRectangle.Top),
+                new PointF(this.DisplayRectangle.Right, this.DisplayRectangle.Bottom)
+            };
+
+            TransformPointsWindowToVirtual(points);
+
+            RectangleF displayRect = new RectangleF(
+                points[0].X, points[0].Y, (points[1].X - points[0].X), (points[1].Y - points[0].Y)
+            );
+
+            int firstIndex = 0;
+
+            foreach (PageElement layer in layers) {
+                if (layer.Rectangle.IntersectsWith(displayRect)) {
+                    if (firstLayer == -1) {
+                        firstLayer = firstIndex;
+                        if (layer.Rectangle.Contains(displayRect))
+                            bgVisible = false;
+                    }
+                    layerCount++;
+                } else
+                    if (firstLayer > -1)
+                        break;
+                firstIndex++;
+            }
+            return bgVisible;
+        }
+        /// <summary>
+        /// Gets layer at point (x, y)
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        private PageElement getLayerAtPoint(float x, float y) {
+            foreach (PageElement layer in layers) {
+                if (layer.Rectangle.Contains(x, y))
+                    return layer;
+            }
+            return null;
+        }
+        #endregion
+
+        #region Properties
+        public Matrix Transform {
+            get { return transform; }
+            set {
+                if (value == null)
+                    throw new ApplicationException("Transform cannot be null");
+
+                transform = value;
+                clonedTransform = value.Clone();
+            }
+        }
+        #endregion
+    }
+}

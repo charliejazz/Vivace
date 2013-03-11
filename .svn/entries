@@ -1,0 +1,83 @@
+9
+
+dir
+3
+file:///C:/SVN/Vivace
+file:///C:/SVN
+
+
+
+2008-10-06T20:37:41.494780Z
+3
+charlie
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b6b30e1e-841f-1542-84c7-3e8fa0c84755
+
+FxCop
+dir
+
+Deployment
+dir
+
+Infrastructure
+dir
+
+Vivace.sln
+file
+33
+
+
+
+2009-02-09T20:53:32.732611Z
+7b989531764060915716b60da6159e3b
+2009-02-09T20:53:44.107611Z
+33
+charlie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6453
+
+Notation
+dir
+
+UI
+dir
+
+Vivace
+dir
+
+Solution Items
+dir
+

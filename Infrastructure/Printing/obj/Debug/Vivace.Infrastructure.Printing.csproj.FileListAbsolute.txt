@@ -1,0 +1,5 @@
+C:\Development\Vivace\Infrastructure\Printing\bin\Debug\Vivace.Infrastructure.Printing.dll
+C:\Development\Vivace\Infrastructure\Printing\bin\Debug\Vivace.Infrastructure.Printing.pdb
+C:\Development\Vivace\Infrastructure\Printing\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Vivace\Infrastructure\Printing\obj\Debug\Vivace.Infrastructure.Printing.dll
+C:\Development\Vivace\Infrastructure\Printing\obj\Debug\Vivace.Infrastructure.Printing.pdb

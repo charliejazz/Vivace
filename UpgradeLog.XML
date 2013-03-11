@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Vivace">
+</Property><Property Name="Solution File" Value="C:\Development\Vivace\Vivace.sln">
+</Property><Property Name="Date" Value="19 August 2010">
+</Property><Property Name="Time" Value="19:55">
+</Property></Properties><Event ErrorLevel="0" Project="Vivace" Source="Vivace\Vivace.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Vivace" Source="Vivace\Vivace.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Vivace.Notation" Source="Notation\Vivace.Notation.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Vivace.Notation" Source="Notation\Vivace.Notation.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Vivace.Infrastructure.Common" Source="Infrastructure\Common\Vivace.Infrastructure.Common.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Vivace.Infrastructure.Common" Source="Infrastructure\Common\Vivace.Infrastructure.Common.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Vivace.Infrastructure.Printing" Source="Infrastructure\Printing\Vivace.Infrastructure.Printing.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Vivace.Infrastructure.Printing" Source="Infrastructure\Printing\Vivace.Infrastructure.Printing.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Vivace.Infrastructure.IO" Source="Infrastructure\IO\Vivace.Infrastructure.IO.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Vivace.Infrastructure.IO" Source="Infrastructure\IO\Vivace.Infrastructure.IO.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Vivace.Infrastructure.Collections" Source="Infrastructure\Collections\Vivace.Infrastructure.Collections.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Vivace.Infrastructure.Collections" Source="Infrastructure\Collections\Vivace.Infrastructure.Collections.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Vivace.Infrastructure.Configuration" Source="Infrastructure\Configuration\Vivace.Infrastructure.Configuration.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Vivace.Infrastructure.Configuration" Source="Infrastructure\Configuration\Vivace.Infrastructure.Configuration.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Vivace.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Vivace.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Vivace.Infrastructure.Common" Source="Infrastructure\Common\Vivace.Infrastructure.Common.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Vivace.Infrastructure.Printing" Source="Infrastructure\Printing\Vivace.Infrastructure.Printing.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Vivace.Infrastructure.IO" Source="Infrastructure\IO\Vivace.Infrastructure.IO.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Vivace.Infrastructure.Collections" Source="Infrastructure\Collections\Vivace.Infrastructure.Collections.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Vivace.Infrastructure.Configuration" Source="Infrastructure\Configuration\Vivace.Infrastructure.Configuration.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Vivace.Notation" Source="Notation\Vivace.Notation.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Vivace" Source="Vivace\Vivace.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

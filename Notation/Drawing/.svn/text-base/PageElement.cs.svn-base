@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Vivace.UI.Controls.ViewPort;
+using System.Runtime.Serialization;
+
+namespace Vivace.Notation.Drawing {
+    /// <summary>
+    /// 
+    /// </summary>
+    [Serializable]
+    public class PageElement : Layer {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="viewPort"></param>
+        public PageElement(ScoreViewPort viewPort)
+            : base(viewPort) {
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="serializationInfo"></param>
+        /// <param name="order"></param>
+        public virtual void Serialise(SerializationInfo serializationInfo, int order) {
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="serializationInfo"></param>
+        /// <param name="order"></param>
+        public virtual void Deserialise(SerializationInfo serializationInfo, int order) {
+        }
+    }
+}

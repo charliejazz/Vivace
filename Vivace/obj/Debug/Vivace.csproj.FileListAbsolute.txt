@@ -1,0 +1,8 @@
+C:\Development\Vivace\Vivace\bin\Debug\Vivace.exe
+C:\Development\Vivace\Vivace\bin\Debug\Vivace.pdb
+C:\Development\Vivace\Vivace\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Vivace\Vivace\obj\Debug\Vivace.Properties.Resources.resources
+C:\Development\Vivace\Vivace\obj\Debug\Vivace.csproj.GenerateResource.Cache
+C:\Development\Vivace\Vivace\obj\Debug\Vivace.exe
+C:\Development\Vivace\Vivace\obj\Debug\Vivace.pdb
+C:\Development\Vivace\Vivace\obj\Debug\Vivace.Vivace.resources

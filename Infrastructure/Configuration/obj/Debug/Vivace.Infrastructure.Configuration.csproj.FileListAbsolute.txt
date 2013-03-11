@@ -1,0 +1,5 @@
+C:\Development\Vivace\Infrastructure\Configuration\bin\Debug\Vivace.Infrastructure.Configuration.dll
+C:\Development\Vivace\Infrastructure\Configuration\bin\Debug\Vivace.Infrastructure.Configuration.pdb
+C:\Development\Vivace\Infrastructure\Configuration\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Vivace\Infrastructure\Configuration\obj\Debug\Vivace.Infrastructure.Configuration.dll
+C:\Development\Vivace\Infrastructure\Configuration\obj\Debug\Vivace.Infrastructure.Configuration.pdb

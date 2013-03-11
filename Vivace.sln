@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{90B1E542-4C25-41D0-B4F8-89755D7EA7B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C4D94C7-5AEC-4A0A-99B3-0F91D605FE7C}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\AssemblyInfo.cs = Solution Items\AssemblyInfo.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{18E39B06-1C4C-4EE7-AE92-B7D4F4820573}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notation", "Notation", "{80B37135-D6F0-440B-9FF3-8274493BEA63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vivace", "Vivace", "{03848B57-064A-49CB-90E9-F0F7FF8DAA20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{46866312-3934-4E04-B680-EC76D697740B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FxCop", "FxCop", "{62120633-E0D1-481F-83F6-73DC9101A505}"
+	ProjectSection(SolutionItems) = preProject
+		FxCop\VivaceSolutionAnalysis.FxCop = FxCop\VivaceSolutionAnalysis.FxCop
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vivace", "Vivace\Vivace.csproj", "{09099A59-10FF-40A0-881D-079599163B54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vivace.Notation", "Notation\Vivace.Notation.csproj", "{74E21BF1-64E1-4C2D-B708-EF2B114ED465}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vivace.Infrastructure.Common", "Infrastructure\Common\Vivace.Infrastructure.Common.csproj", "{2777A1E9-0FAF-41B6-AE3E-44C280F15FC8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "VivaceSetup", "Deployment\Deployment.vdproj", "{DE1030F8-2408-4841-AF12-596DBA2949A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vivace.Infrastructure.Printing", "Infrastructure\Printing\Vivace.Infrastructure.Printing.csproj", "{50F3D323-1F31-46A2-8AB2-A816433D0DF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vivace.Infrastructure.IO", "Infrastructure\IO\Vivace.Infrastructure.IO.csproj", "{DFF8A432-59C4-4683-B8C4-047C78E24B54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vivace.Infrastructure.Collections", "Infrastructure\Collections\Vivace.Infrastructure.Collections.csproj", "{319AC627-5C06-479B-A47A-7625D724E015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vivace.Infrastructure.Configuration", "Infrastructure\Configuration\Vivace.Infrastructure.Configuration.csproj", "{31107068-C112-460C-828D-8C74A6936E3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09099A59-10FF-40A0-881D-079599163B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09099A59-10FF-40A0-881D-079599163B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09099A59-10FF-40A0-881D-079599163B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09099A59-10FF-40A0-881D-079599163B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E21BF1-64E1-4C2D-B708-EF2B114ED465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E21BF1-64E1-4C2D-B708-EF2B114ED465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E21BF1-64E1-4C2D-B708-EF2B114ED465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E21BF1-64E1-4C2D-B708-EF2B114ED465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2777A1E9-0FAF-41B6-AE3E-44C280F15FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2777A1E9-0FAF-41B6-AE3E-44C280F15FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2777A1E9-0FAF-41B6-AE3E-44C280F15FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2777A1E9-0FAF-41B6-AE3E-44C280F15FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE1030F8-2408-4841-AF12-596DBA2949A0}.Debug|Any CPU.ActiveCfg = Debug
+		{DE1030F8-2408-4841-AF12-596DBA2949A0}.Release|Any CPU.ActiveCfg = Release
+		{50F3D323-1F31-46A2-8AB2-A816433D0DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50F3D323-1F31-46A2-8AB2-A816433D0DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50F3D323-1F31-46A2-8AB2-A816433D0DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50F3D323-1F31-46A2-8AB2-A816433D0DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF8A432-59C4-4683-B8C4-047C78E24B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF8A432-59C4-4683-B8C4-047C78E24B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF8A432-59C4-4683-B8C4-047C78E24B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF8A432-59C4-4683-B8C4-047C78E24B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{319AC627-5C06-479B-A47A-7625D724E015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319AC627-5C06-479B-A47A-7625D724E015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319AC627-5C06-479B-A47A-7625D724E015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319AC627-5C06-479B-A47A-7625D724E015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31107068-C112-460C-828D-8C74A6936E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31107068-C112-460C-828D-8C74A6936E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31107068-C112-460C-828D-8C74A6936E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31107068-C112-460C-828D-8C74A6936E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE1030F8-2408-4841-AF12-596DBA2949A0} = {90B1E542-4C25-41D0-B4F8-89755D7EA7B0}
+		{2777A1E9-0FAF-41B6-AE3E-44C280F15FC8} = {18E39B06-1C4C-4EE7-AE92-B7D4F4820573}
+		{50F3D323-1F31-46A2-8AB2-A816433D0DF7} = {18E39B06-1C4C-4EE7-AE92-B7D4F4820573}
+		{DFF8A432-59C4-4683-B8C4-047C78E24B54} = {18E39B06-1C4C-4EE7-AE92-B7D4F4820573}
+		{319AC627-5C06-479B-A47A-7625D724E015} = {18E39B06-1C4C-4EE7-AE92-B7D4F4820573}
+		{31107068-C112-460C-828D-8C74A6936E3D} = {18E39B06-1C4C-4EE7-AE92-B7D4F4820573}
+		{74E21BF1-64E1-4C2D-B708-EF2B114ED465} = {80B37135-D6F0-440B-9FF3-8274493BEA63}
+		{09099A59-10FF-40A0-881D-079599163B54} = {03848B57-064A-49CB-90E9-F0F7FF8DAA20}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

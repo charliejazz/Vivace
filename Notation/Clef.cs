@@ -1,0 +1,138 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Runtime.Serialization;
+using System.Globalization;
+
+namespace Vivace.Notation {
+    /// <summary>
+    /// 
+    /// </summary>
+    [Serializable]
+    public class Clef : MusicalTagParameter {
+        private ClefType clefType;
+        private int staffLine;
+        private OctavaType octava;
+
+        public Clef()
+            : base(Fraction.Zero, null) {
+            octava = OctavaType.None;
+            staffLine = 2;
+            clefType = ClefType.Violin;
+        }
+
+        public Clef(Fraction tp)
+            : base(tp, null) {
+            octava = OctavaType.None;
+            staffLine = 2;
+            clefType = ClefType.Violin;
+        }
+
+        public Clef(ClefInfo clefInfo)
+            : base(Fraction.Zero, null) {
+            setType(clefInfo);
+        }
+
+        private void setType(ClefInfo clefInfo) {
+            // set octava;
+            octava = clefInfo.Octava;
+            //set clef type
+            switch (clefInfo.ClefName) {
+                case ClefName.Bass:
+                    clefType = ClefType.Bass;
+                    staffLine = 4;
+                    break;
+                case ClefName.Tenor:
+                    clefType = ClefType.Bratsche;
+                    staffLine = 4;
+                    break;
+                case ClefName.Alto:
+                    clefType = ClefType.Bratsche;
+                    staffLine = 3;
+                    break;
+                case ClefName.Treble:
+                    clefType = ClefType.Violin;
+                    staffLine = 2;
+                    break;
+                case ClefName.Off:
+                    clefType = ClefType.Off;
+                    staffLine = 2;
+                    break;
+                case ClefName.DoubleG:
+                    clefType = ClefType.DoubleG;
+                    staffLine = 2;
+                    break;
+                case ClefName.Perc:
+                    clefType = ClefType.Perc;
+                    staffLine = 2;
+                    break;
+                default:
+                    clefType = ClefType.Violin;
+                    staffLine = 2;
+                    break;
+            }
+        }
+        /// <summary>
+        /// determines if two Clef objects are equal
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj) {
+            if (obj is Clef) {
+                Clef c = obj as Clef;
+                return (
+                    this.ClefType == c.ClefType 
+                    && this.Octava == c.Octava 
+                    && this.StaffLine == c.StaffLine
+                );
+            }
+            return false;
+        }
+
+        public override int GetHashCode() {
+            return this.StaffLine ^ (int)this.clefType;
+        }
+        
+       
+        public ClefType ClefType {
+            get { return clefType; }
+            set { clefType = value; }
+        }
+        public int StaffLine {
+            get { return staffLine; }
+            set { staffLine = value; }
+        }
+        public OctavaType Octava {
+            get { return octava; }
+            set { octava = value; }
+        }
+
+        #region Serialization
+        /// <summary>
+        /// Save object to serialization stream
+        /// </summary>
+        /// <param name="serializationInfo"></param>
+        public virtual void Serialize(SerializationInfo serializationInfo, int order) {
+            serializationInfo.AddValue(szClefType, clefType);
+            serializationInfo.AddValue(szStaffLine, staffLine.ToString(CultureInfo.InvariantCulture));
+            serializationInfo.AddValue(szOctava, octava);
+            base.Serialize(serializationInfo, order);
+        }
+        /// <summary>
+        /// Load object from serialization stream
+        /// </summary>
+        /// <param name="serializationInfo"></param>
+        public virtual void Deserialize(SerializationInfo serializationInfo, int order) {
+            staffLine = serializationInfo.GetInt32(szStaffLine);
+            clefType = (ClefType)serializationInfo.GetValue(szClefType, typeof(ClefType));
+            octava = (OctavaType)serializationInfo.GetValue(szOctava, typeof(OctavaType));
+            base.Deserialize(serializationInfo, order);
+        }
+
+        private static string szStaffLine = "StaffLine";
+        private static string szClefType = "ClefType";
+        private static string szOctava = "Octava";
+        #endregion
+    }
+}

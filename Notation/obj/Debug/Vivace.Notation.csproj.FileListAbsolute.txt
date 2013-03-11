@@ -1,0 +1,9 @@
+C:\Development\Vivace\Notation\bin\Debug\Vivace.Notation.dll
+C:\Development\Vivace\Notation\bin\Debug\Vivace.Notation.pdb
+C:\Development\Vivace\Notation\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Vivace\Notation\obj\Debug\Vivace.Notation.dll
+C:\Development\Vivace\Notation\obj\Debug\Vivace.Notation.pdb
+C:\Development\Vivace\Notation\bin\Debug\Vivace.Infrastructure.Common.dll
+C:\Development\Vivace\Notation\bin\Debug\Vivace.Infrastructure.Configuration.dll
+C:\Development\Vivace\Notation\bin\Debug\Vivace.Infrastructure.Configuration.pdb
+C:\Development\Vivace\Notation\bin\Debug\Vivace.Infrastructure.Common.pdb

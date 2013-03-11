@@ -1,0 +1,1066 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="1.36" Name="VivaceSolutionAnalysis">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">c:\program files\microsoft fxcop 1.36\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <Target Name="$(ProjectDir)/../Infrastructure/Collections/bin/Debug/Vivace.Infrastructure.Collections.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../Infrastructure/Common/bin/Debug/Vivace.Infrastructure.Common.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../Infrastructure/Configuration/bin/Debug/Vivace.Infrastructure.Configuration.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../Infrastructure/Graphics/bin/Debug/Vivace.Infrastructure.Graphics.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../Infrastructure/IO/bin/Debug/Vivace.Infrastructure.IO.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../Infrastructure/Printing/bin/Debug/Vivace.Infrastructure.Printing.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../Notation/bin/Debug/Vivace.Notation.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../UI/Controls/bin/Debug/Vivace.UI.Controls.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/../Vivace/bin/Debug/Vivace.exe" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="1.36">
+  <Namespaces>
+   <Namespace Name="Vivace">
+    <Messages>
+     <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+      <Issue Name="Namespace">
+       <Item>Vivace</Item>
+       <Item>Vivace</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Vivace.Infrastructure.Configuration">
+    <Messages>
+     <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+      <Issue Name="Namespace">
+       <Item>Vivace</Item>
+       <Item>Vivace.Infrastructure.Configuration</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Vivace.Notation">
+    <Messages>
+     <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+      <Issue Name="Namespace">
+       <Item>Vivace</Item>
+       <Item>Vivace.Notation</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/../Infrastructure/Collections/bin/Debug/Vivace.Infrastructure.Collections.dll">
+    <Modules>
+     <Module Name="vivace.infrastructure.collections.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2008-10-09 17:55:10Z">
+        <Issue Name="NoStrongName">
+         <Item>'Vivace.Infrastructure.Collections.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+        <Issue Name="Assembly">
+         <Item>Vivace</Item>
+         <Item>'Vivace.Infrastructure.Collections.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2008-10-09 17:55:10Z">
+        <Issue>
+         <Item>'Vivace.Infrastructure.Collections.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../Infrastructure/Common/bin/Debug/Vivace.Infrastructure.Common.dll">
+    <Modules>
+     <Module Name="vivace.infrastructure.common.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2008-10-09 17:55:10Z">
+        <Issue Name="NoStrongName">
+         <Item>'Vivace.Infrastructure.Common.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+        <Issue Name="Assembly">
+         <Item>Vivace</Item>
+         <Item>'Vivace.Infrastructure.Common.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2008-10-09 17:55:10Z">
+        <Issue>
+         <Item>'Vivace.Infrastructure.Common.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Common">
+        <Types>
+         <Type Name="Common">
+          <Messages>
+           <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Created="2008-10-09 17:55:10Z">
+            <Issue Name="System">
+             <Item>'Common'</Item>
+             <Item>System.Data.Common</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#LoadIcon(System.String)">
+            <Messages>
+             <Message Id="resourceName" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2008-10-09 17:55:10Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'resourceName'</Item>
+               <Item>'Common.LoadIcon(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../Infrastructure/Configuration/bin/Debug/Vivace.Infrastructure.Configuration.dll">
+    <Modules>
+     <Module Name="vivace.infrastructure.configuration.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2008-10-09 17:55:10Z">
+        <Issue Name="NoStrongName">
+         <Item>'Vivace.Infrastructure.Configuration.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+        <Issue Name="Assembly">
+         <Item>Vivace</Item>
+         <Item>'Vivace.Infrastructure.Configuration.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2008-10-09 17:55:10Z">
+        <Issue>
+         <Item>'Vivace.Infrastructure.Configuration.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../Infrastructure/Graphics/bin/Debug/Vivace.Infrastructure.Graphics.dll">
+    <Modules>
+     <Module Name="vivace.infrastructure.graphics.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2008-10-09 17:55:10Z">
+        <Issue Name="NoStrongName">
+         <Item>'Vivace.Infrastructure.Graphics.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+        <Issue Name="Assembly">
+         <Item>Vivace</Item>
+         <Item>'Vivace.Infrastructure.Graphics.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2008-10-09 17:55:10Z">
+        <Issue>
+         <Item>'Vivace.Infrastructure.Graphics.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../Infrastructure/IO/bin/Debug/Vivace.Infrastructure.IO.dll">
+    <Modules>
+     <Module Name="vivace.infrastructure.io.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2008-10-09 17:55:10Z">
+        <Issue Name="NoStrongName">
+         <Item>'Vivace.Infrastructure.IO.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+        <Issue Name="Assembly">
+         <Item>Vivace</Item>
+         <Item>'Vivace.Infrastructure.IO.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2008-10-09 17:55:10Z">
+        <Issue>
+         <Item>'Vivace.Infrastructure.IO.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../Infrastructure/Printing/bin/Debug/Vivace.Infrastructure.Printing.dll">
+    <Modules>
+     <Module Name="vivace.infrastructure.printing.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2008-10-09 17:55:10Z">
+        <Issue Name="NoStrongName">
+         <Item>'Vivace.Infrastructure.Printing.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+        <Issue Name="Assembly">
+         <Item>Vivace</Item>
+         <Item>'Vivace.Infrastructure.Printing.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2008-10-09 17:55:10Z">
+        <Issue>
+         <Item>'Vivace.Infrastructure.Printing.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../Notation/bin/Debug/Vivace.Notation.dll">
+    <Modules>
+     <Module Name="vivace.notation.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2008-10-09 17:55:10Z">
+        <Issue Name="NoStrongName">
+         <Item>'Vivace.Notation.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+        <Issue Name="Assembly">
+         <Item>Vivace</Item>
+         <Item>'Vivace.Notation.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2008-10-09 17:55:10Z">
+        <Issue>
+         <Item>'Vivace.Notation.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Vivace.Notation">
+        <Types>
+         <Type Name="Fraction">
+          <Members>
+           <Member Name="#CompareTo(System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Parameter">
+               <Item>'obj'</Item>
+               <Item>'string'</Item>
+               <Item>'Fraction.CompareTo(object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CompareTo(Vivace.Notation.Fraction)">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'string.Format(string, object, object)'</Item>
+               <Item>'Fraction.CompareTo(Fraction)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CrossReducePair(Vivace.Notation.Fraction&amp;,Vivace.Notation.Fraction&amp;)">
+            <Messages>
+             <Message Id="0#" TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045" Created="2008-10-09 17:55:10Z">
+              <Issue Certainty="50">
+               <Item>'frac1'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1#" TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045" Created="2008-10-09 17:55:10Z">
+              <Issue Certainty="50">
+               <Item>'frac2'</Item>
+              </Issue>
+             </Message>
+             <Message Id="frac" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+              <Issue Name="MemberParameter">
+               <Item>'Fraction.CrossReducePair(ref Fraction, ref Fraction)'</Item>
+               <Item>frac</Item>
+               <Item>'frac1'</Item>
+              </Issue>
+              <Issue Name="MemberParameter">
+               <Item>'Fraction.CrossReducePair(ref Fraction, ref Fraction)'</Item>
+               <Item>frac</Item>
+               <Item>'frac2'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EpsilonDouble">
+            <Messages>
+             <Message TypeName="UseLiteralsWhereAppropriate" Category="Microsoft.Performance" CheckId="CA1802" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'Fraction.EpsilonDouble'</Item>
+               <Item>1.0842021724855E-19</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Equals(System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'Fraction.Equals(object)'</Item>
+               <Item>'object'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Addition(System.Double,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Visibility">
+               <Item>'Fraction.Add(Fraction, Fraction)'</Item>
+               <Item>'Fraction.operator +(double, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Addition(System.Int64,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Visibility">
+               <Item>'Fraction.Add(Fraction, Fraction)'</Item>
+               <Item>'Fraction.operator +(long, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Addition(Vivace.Notation.Fraction,System.Double)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Visibility">
+               <Item>'Fraction.Add(Fraction, Fraction)'</Item>
+               <Item>'Fraction.operator +(Fraction, double)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Addition(Vivace.Notation.Fraction,System.Int64)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Visibility">
+               <Item>'Fraction.Add(Fraction, Fraction)'</Item>
+               <Item>'Fraction.operator +(Fraction, long)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Addition(Vivace.Notation.Fraction,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Visibility">
+               <Item>'Fraction.Add(Fraction, Fraction)'</Item>
+               <Item>'Fraction.operator +(Fraction, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Division(System.Double,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Divide</Item>
+               <Item>'Fraction.operator /(double, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Division(System.Int64,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Divide</Item>
+               <Item>'Fraction.operator /(long, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Division(Vivace.Notation.Fraction,System.Double)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Divide</Item>
+               <Item>'Fraction.operator /(Fraction, double)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Division(Vivace.Notation.Fraction,System.Int64)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Divide</Item>
+               <Item>'Fraction.operator /(Fraction, long)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Division(Vivace.Notation.Fraction,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Divide</Item>
+               <Item>'Fraction.operator /(Fraction, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Explicit(Vivace.Notation.Fraction):System.Double">
+            <Messages>
+             <Message Id="frac" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+              <Issue Name="MemberParameter">
+               <Item>'Fraction.explicit operator double(Fraction)'</Item>
+               <Item>frac</Item>
+               <Item>'frac'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Explicit(Vivace.Notation.Fraction):System.Int32">
+            <Messages>
+             <Message Id="frac" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+              <Issue Name="MemberParameter">
+               <Item>'Fraction.explicit operator int(Fraction)'</Item>
+               <Item>frac</Item>
+               <Item>'frac'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Explicit(Vivace.Notation.Fraction):System.Int64">
+            <Messages>
+             <Message Id="frac" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+              <Issue Name="MemberParameter">
+               <Item>'Fraction.explicit operator long(Fraction)'</Item>
+               <Item>frac</Item>
+               <Item>'frac'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Implicit(Vivace.Notation.Fraction):System.String">
+            <Messages>
+             <Message Id="frac" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+              <Issue Name="MemberParameter">
+               <Item>'Fraction.implicit operator string(Fraction)'</Item>
+               <Item>frac</Item>
+               <Item>'frac'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Modulus(System.Double,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Mod</Item>
+               <Item>'Fraction.operator %(double, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Modulus(System.Int64,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Mod</Item>
+               <Item>'Fraction.operator %(long, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Modulus(Vivace.Notation.Fraction,System.Double)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Mod</Item>
+               <Item>'Fraction.operator %(Fraction, double)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Modulus(Vivace.Notation.Fraction,System.Int64)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Mod</Item>
+               <Item>'Fraction.operator %(Fraction, long)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Modulus(Vivace.Notation.Fraction,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Mod</Item>
+               <Item>'Fraction.operator %(Fraction, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Multiply(System.Double,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Visibility">
+               <Item>'Fraction.Multiply(Fraction, Fraction)'</Item>
+               <Item>'Fraction.operator *(double, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Multiply(System.Int64,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Visibility">
+               <Item>'Fraction.Multiply(Fraction, Fraction)'</Item>
+               <Item>'Fraction.operator *(long, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Multiply(Vivace.Notation.Fraction,System.Double)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Visibility">
+               <Item>'Fraction.Multiply(Fraction, Fraction)'</Item>
+               <Item>'Fraction.operator *(Fraction, double)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Multiply(Vivace.Notation.Fraction,System.Int64)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Visibility">
+               <Item>'Fraction.Multiply(Fraction, Fraction)'</Item>
+               <Item>'Fraction.operator *(Fraction, long)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Multiply(Vivace.Notation.Fraction,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Visibility">
+               <Item>'Fraction.Multiply(Fraction, Fraction)'</Item>
+               <Item>'Fraction.operator *(Fraction, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Subtraction(System.Double,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Subtract</Item>
+               <Item>'Fraction.operator -(double, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Subtraction(System.Int64,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Subtract</Item>
+               <Item>'Fraction.operator -(long, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Subtraction(Vivace.Notation.Fraction,System.Double)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Subtract</Item>
+               <Item>'Fraction.operator -(Fraction, double)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Subtraction(Vivace.Notation.Fraction,System.Int64)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Subtract</Item>
+               <Item>'Fraction.operator -(Fraction, long)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_Subtraction(Vivace.Notation.Fraction,Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>Subtract</Item>
+               <Item>'Fraction.operator -(Fraction, Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#op_UnaryNegation(Vivace.Notation.Fraction)">
+            <Messages>
+             <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Visibility">
+               <Item>'Fraction.Negate(Fraction)'</Item>
+               <Item>'Fraction.operator -(Fraction)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ReduceFraction(Vivace.Notation.Fraction&amp;)">
+            <Messages>
+             <Message Id="0#" TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045" Created="2008-10-09 17:55:10Z">
+              <Issue Certainty="50">
+               <Item>'frac'</Item>
+              </Issue>
+             </Message>
+             <Message Id="frac" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+              <Issue Name="MemberParameter">
+               <Item>'Fraction.ReduceFraction(ref Fraction)'</Item>
+               <Item>frac</Item>
+               <Item>'frac'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToFraction(System.Double)">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'Fraction.ToFraction(double)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'Fraction.ToFraction(double)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'Fraction.ToFraction(double)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToFraction(System.String)">
+            <Messages>
+             <Message Id="System.Convert.ToDouble(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'Convert.ToDouble(string)'</Item>
+               <Item>'Fraction.ToFraction(string)'</Item>
+               <Item>'Convert.ToDouble(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToInt64(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'Convert.ToInt64(string)'</Item>
+               <Item>'Fraction.ToFraction(string)'</Item>
+               <Item>'Convert.ToInt64(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToInt64(string)'</Item>
+               <Item>'Fraction.ToFraction(string)'</Item>
+               <Item>'Convert.ToInt64(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToInt64(string)'</Item>
+               <Item>'Fraction.ToFraction(string)'</Item>
+               <Item>'Convert.ToInt64(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'Fraction.ToFraction(string)'</Item>
+               <Item>'string.IndexOf(string)'</Item>
+               <Item>'string.IndexOf(string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Created="2008-10-09 17:55:10Z">
+              <Issue Name="IsNullOrEmpty">
+               <Item>'string.operator ==(string, string)'</Item>
+               <Item>'Fraction.ToFraction(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToInt32()">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'Fraction.ToInt32()'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToInt64()">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'Fraction.ToInt64()'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToString()">
+            <Messages>
+             <Message Id="System.Int64.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'long.ToString()'</Item>
+               <Item>'Fraction.ToString()'</Item>
+               <Item>'long.ToString(IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'long.ToString()'</Item>
+               <Item>'Fraction.ToString()'</Item>
+               <Item>'long.ToString(IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'long.ToString()'</Item>
+               <Item>'Fraction.ToString()'</Item>
+               <Item>'long.ToString(IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FractionException">
+          <Messages>
+           <Message TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032" Created="2008-10-09 17:55:10Z">
+            <Issue Name="MissingConstructor">
+             <Item>'FractionException'</Item>
+             <Item>protected FractionException(SerializationInfo, StreamingContext)</Item>
+            </Issue>
+            <Issue Name="MissingConstructor">
+             <Item>'FractionException'</Item>
+             <Item>public FractionException()</Item>
+            </Issue>
+            <Issue Name="MissingConstructor">
+             <Item>'FractionException'</Item>
+             <Item>public FractionException(String)</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Created="2008-10-09 17:55:10Z">
+            <Issue Certainty="95" Level="Error">
+             <Item>'FractionException'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor(System.String,System.Exception)">
+            <Messages>
+             <Message Id="Inner" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2008-10-09 17:55:10Z">
+              <Issue Name="MemberParameter">
+               <Item>'FractionException.FractionException(string, Exception)'</Item>
+               <Item>Inner</Item>
+               <Item>'InnerException'</Item>
+               <Item>inner</Item>
+              </Issue>
+             </Message>
+             <Message Id="Message" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2008-10-09 17:55:10Z">
+              <Issue Name="MemberParameter">
+               <Item>'FractionException.FractionException(string, Exception)'</Item>
+               <Item>Message</Item>
+               <Item>'Message'</Item>
+               <Item>message</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MusicalObject">
+          <Members>
+           <Member Name="#IsPowerOfTwoDenom(Vivace.Notation.Fraction)">
+            <Messages>
+             <Message Id="Denom" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+              <Issue Name="Member">
+               <Item>Denom</Item>
+               <Item>'MusicalObject.IsPowerOfTwoDenom(Fraction)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="dur" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+              <Issue Name="MemberParameter">
+               <Item>'MusicalObject.IsPowerOfTwoDenom(Fraction)'</Item>
+               <Item>dur</Item>
+               <Item>'dur'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../UI/Controls/bin/Debug/Vivace.UI.Controls.dll">
+    <Modules>
+     <Module Name="vivace.ui.controls.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2008-10-09 17:55:10Z">
+        <Issue Name="NoStrongName">
+         <Item>'Vivace.UI.Controls.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+        <Issue Name="Assembly">
+         <Item>Vivace</Item>
+         <Item>'Vivace.UI.Controls.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2008-10-09 17:55:10Z">
+        <Issue>
+         <Item>'Vivace.UI.Controls.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Controls">
+        <Types>
+         <Type Name="VTextBox">
+          <Members>
+           <Member Name="#cursorX">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'VTextBox.cursorX'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#cursorY">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'VTextBox.cursorY'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <Messages>
+             <Message Id="g" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'VTextBox.OnPaint(PaintEventArgs)'</Item>
+               <Item>'g'</Item>
+               <Item>'Graphics'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#text">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'VTextBox.text'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#textAlign">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'VTextBox.textAlign'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#textLength">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'VTextBox.textLength'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#zoomFactor">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2008-10-09 17:55:10Z">
+              <Issue>
+               <Item>'VTextBox.zoomFactor'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../Vivace/bin/Debug/Vivace.exe">
+    <Modules>
+     <Module Name="vivace.exe">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2008-10-09 17:55:10Z">
+        <Issue Name="NoStrongName">
+         <Item>'Vivace.exe'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+        <Issue Name="Assembly">
+         <Item>Vivace</Item>
+         <Item>'Vivace.exe'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2008-10-09 17:55:10Z">
+        <Issue>
+         <Item>'Vivace.exe'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2008-10-09 17:55:10Z">
+        <Issue>
+         <Item>'Vivace.exe'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Vivace">
+        <Types>
+         <Type Name="Vivace">
+          <Messages>
+           <Message Id="Vivace" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2008-10-09 17:55:10Z">
+            <Issue Name="Type">
+             <Item>Vivace</Item>
+             <Item>'Vivace'</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Created="2008-10-09 17:55:10Z">
+            <Issue>
+             <Item>'Vivace'</Item>
+             <Item>Vivace</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+    <Resolution Name="Default">It appears that field {0} is never used or is only ever assigned to. Use this field or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800">
+    <Resolution Name="Parameter">{0}, a parameter, is cast to type {1} multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+    <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045">
+    <Resolution Name="Default">Consider a design that does not require that {0} be a reference parameter.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="MemberParameter">In member {0}, correct the casing of '{1}' in parameter name {2} by changing it to '{3}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Assembly">Correct the spelling of '{0}' in assembly name {1}.</Resolution>
+    <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+    <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032">
+    <Resolution Name="MissingConstructor">Add the following constructor to {0}: {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+    <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+    <Resolution Name="Default">Because assembly {0} contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237">
+    <Resolution Name="Default">Add [Serializable] to {0} as this type implements ISerializable.</Resolution>
+   </Rule>
+   <Rule TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225">
+    <Resolution Name="Default">Provide a method named '{0}' as a friendly alternate for operator {1}.</Resolution>
+    <Resolution Name="Visibility">Mark {0} as public because it is a friendly alternate for operator {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+    <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+    <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+    <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307">
+    <Resolution Name="Default">{0} makes a call to {1} that does not explicitly provide a StringComparison. This should be replaced with a call to {2}.</Resolution>
+   </Rule>
+   <Rule TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820">
+    <Resolution Name="IsNullOrEmpty">Replace the call to {0} in {1} with a call to 'String.IsNullOrEmpty'.</Resolution>
+   </Rule>
+   <Rule TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724">
+    <Resolution Name="Default">The type name {0} conflicts in whole or in part with the namespace name '{1}'. Change either name to eliminate the conflict.</Resolution>
+    <Resolution Name="System">The type name {0} conflicts in whole or in part with the namespace name '{1}' defined in the .NET Framework. Rename the type to eliminate the conflict.</Resolution>
+   </Rule>
+   <Rule TypeName="UseLiteralsWhereAppropriate" Category="Microsoft.Performance" CheckId="CA1802">
+    <Resolution Name="Default">Field {0} is declared as 'static readonly' but is initialized with a constant value '{1}'. Mark this field as 'const' instead.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

@@ -1,0 +1,5 @@
+C:\Development\Vivace\Infrastructure\Manipulation\bin\Debug\Vivace.Infrastructure.Manipulation.dll
+C:\Development\Vivace\Infrastructure\Manipulation\bin\Debug\Vivace.Infrastructure.Manipulation.pdb
+C:\Development\Vivace\Infrastructure\Manipulation\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Vivace\Infrastructure\Manipulation\obj\Debug\Vivace.Infrastructure.Manipulation.dll
+C:\Development\Vivace\Infrastructure\Manipulation\obj\Debug\Vivace.Infrastructure.Manipulation.pdb
